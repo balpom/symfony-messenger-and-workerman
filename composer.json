@@ -1,0 +1,29 @@
+{
+    "name": "balpom/symfony-messenger-and-workerman",
+    "description": "A simple example of using a Workerman with Symfony Messenger.",
+    "type": "library",
+    "homepage": "https://www.balpom.ru",
+    "license": "MIT",
+    "keywords": ["workerman", "worker", "symfony", "messenger", "queue", "use", "usage", "example", "sample", "doctrine", "sqlite", "transport"],
+    "autoload": {
+        "psr-4": {
+            "Balpom\\SymfonyMessengerWorkerman\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikhail (Balpom)"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "php-di/php-di": ">=7.0",
+        "workerman/workerman": ">=4.1",
+        "symfony/messenger": ">=6.4",
+        "symfony/doctrine-messenger": ">=6.4",
+        "symfony/rate-limiter": ">=6.4",
+        "symfony/cache": ">=6.4",
+        "symfony/event-dispatcher": ">=6.4",
+        "symfony/process": ">=6.4"
+    }
+}

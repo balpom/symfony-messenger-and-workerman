@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+namespace Balpom\SymfonyMessengerWorkerman;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Process\Process;
+
+$process = new Process(['php', 'bin/runner', 'start']);
+$process->run();
+//echo $process->getOutput();

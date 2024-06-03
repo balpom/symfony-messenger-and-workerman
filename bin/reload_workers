@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+namespace Balpom\SymfonyMessengerWorkerman;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+SymfonyWorkerFactory::getWorker(__DIR__ . '/../config/dependencies.php')->stopWorkers();
+SymfonyWorkerFactory::getWorker(__DIR__ . '/../config/dependencies.php')->run();
+

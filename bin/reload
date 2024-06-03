@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Process\Process;
+
+$process = new Process(['php', 'bin/stop']);
+$process->run();
+//$process = new Process(['php', 'bin/runner', 'reload']);
+$process = new Process(['php', 'bin/runner', 'start']);
+$process->run();
+echo $process->getOutput();
