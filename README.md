@@ -58,7 +58,7 @@ It stop all Workers executions.
 Created by me SymfonyWorker class is a wrapper for Symfony\Component\Messenger\Worker and built on the base of 
 the ConsumeMessagesCommand class (Symfony\Component\Messenger\Command\ConsumeMessagesCommand).
 
-For Workerman\Worker running i created very simple script bin/runner:
+For Workerman\Worker running I created very simple script bin/runner:
 ```php
 namespace Balpom\SymfonyMessengerWorkerman;
 use Workerman\Worker;
