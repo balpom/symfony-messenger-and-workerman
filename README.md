@@ -7,7 +7,7 @@ It use Doctrine with sqlite database as Message Bus transport and for Workers ru
 However, my inner perfectionist :-) does not like the idea, when manually open the console, run a script in it, etc.
 I wanted to use a single command to open several consoles at once in the right amount, in which the worker's would already be working, and if one of the workers fell, the console was restarting itself (a set number of running consoles (scripts) was supported).
 
-As a result, I created a new example, in which I completely abandoned the symfony/console component, and for Workers starting and for maintaining a set number of them, I use [Workerman](https://github.com/walkor/workerman) framework (https://github.com/walkor/workerman](https://github.com/walkor/workerman)).
+As a result, I created a new example, in which I completely abandoned the symfony/console component, and for Workers starting and for maintaining a set number of them, I use [Workerman](https://github.com/walkor/workerman) framework (https://github.com/walkor/workerman](https://github.com/walkor/workerman).
 
 Everything was tested in Linux.
 
