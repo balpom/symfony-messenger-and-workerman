@@ -7,9 +7,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Process\Process;
 
-$process = new Process(['php', 'bin/stop_workers']);
-$process->run();
-echo $process->getOutput();
 $process = new Process(['php', 'bin/runner', 'stop']);
 $process->run();
-//echo $process->getOutput();
+$process = new Process(['php', 'bin/stop_workers']);
+$process->run();
