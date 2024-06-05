@@ -90,10 +90,3 @@ For current status checking try this command:
 php bin/runner status
 ```
 
-## Disadvantages
-
-In this example for illustration I try start Symfony Workers from terminal console.
-
-As practice showing, when Symfony Worker, launched from the terminal console, is shutting down, for some reason the terminal console does not restart and the corresponding php process remains hanging in memory (however, it completes its work on command php *bin/runner stop* or *php bin/stop*; command *php bin/reload* don't work properly).
-
-Symfony Workers, that are not run from the terminal, work normally and managed by commands *bin/runner start*, *bin/runner stop* and *bin/runner reload*.
