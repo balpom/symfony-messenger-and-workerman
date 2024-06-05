@@ -21,7 +21,7 @@ $worker->onWorkerStart = function (Worker $worker) {
 
     $pid = \posix_getpid(); // Current Workerman's Worker PID.
     $line = 'bash -c "gnome-terminal --wait -- php bin/start_worker; kill -SIGQUIT ' . $pid . '"';
-    echo '--- ' . $worker->id . ' === ' . $runLine . PHP_EOL;
+    //echo '--- ' . $worker->id . ' === ' . $runLine . PHP_EOL;
     //sleep(3);
 
     $process = Process::fromShellCommandline($line);
@@ -29,4 +29,3 @@ $worker->onWorkerStart = function (Worker $worker) {
 };
 
 Worker::runAll();
-
