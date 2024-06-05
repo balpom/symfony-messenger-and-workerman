@@ -80,7 +80,7 @@ $worker->onWorkerStart = function (Worker $worker) {
 
 Worker::runAll();
 ```
-It has line $process = new Process(\['gnome-terminal', '--', 'php', 'bin/start_worker'\]);
+It has line ``` $line = 'bash -c "gnome-terminal --wait -- php bin/start_worker; kill -SIGQUIT ' . $pid . '"'; ```
 If you don't have *gnome-terminal* in your system, you must replace this line to the line, that runs the command "php bin/start_worker" for your terminal.
 
 Also you may run, stop and reload workers directly from "bin/runner" script by this commands:
