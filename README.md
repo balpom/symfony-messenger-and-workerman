@@ -70,10 +70,14 @@ $worker->count = 3;        // Numbef of Workers.
 
 $worker->onWorkerStart = function (Worker $worker) {
     //$process = new Process(['php', 'bin/start_worker']);
-    // SymfonyWorkerFactory::getWorker(__DIR__ . '/../config/dependencies.php')->run();
-    $process = new Process(['gnome-terminal', '--', 'php', 'bin/start_worker']);
+    //SymfonyWorkerFactory::getWorker(__DIR__ . '/../config/dependencies.php')->run();
+
+    $pid = \posix_getpid(); // Current Workerman's Worker PID.
+    $line = 'bash -c "gnome-terminal --wait -- php bin/start_worker; kill -SIGQUIT ' . $pid . '"';
+    $process = Process::fromShellCommandline($line);
     $process->run();
 };
+
 Worker::runAll();
 ```
 It has line $process = new Process(\['gnome-terminal', '--', 'php', 'bin/start_worker'\]);
